@@ -1,12 +1,13 @@
-function getMostPopularPlaces(places) {
+export function getMostPopularPlaces(places) {
     let newPlaces = places.split(' ');
     let firstMostPopular;
     let secondMostPopular;
-    let result = "";
+    let result ;
 
     for (let index = 0; index < newPlaces.length; index++) {
-        firstMostPopular = Math.max(...newPlaces[index]);
-        result += firstMostPopular;
+        if (newPlaces[index] !== ",") {
+            result = newPlaces;
+        }
     }
 
     return result;

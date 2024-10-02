@@ -1,4 +1,4 @@
-function removeWords(original, wordsToRemove) {
+export function removeWords(original, wordsToRemove) {
     
     let newString = original.split(' ');
 
@@ -9,7 +9,7 @@ function removeWords(original, wordsToRemove) {
         for (let i = 0; i < wordsToRemove.length; i++) {
             if (newString[index] !== wordsToRemove[i]) {
                 result.push(newString[index]);
-                values = result.join(" ");
+                values = '"' + result.join(" ") + '"';
             }
             
         }
